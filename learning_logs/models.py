@@ -22,7 +22,10 @@ class Entry(models.Model):
     class Meta:
         verbose_name_plural = 'entries'
 
-    def __str__(selfs):
+    def __str__(self):
         '''Devolve uma representação em string do modelo.'''
-        return self.text[:50] + '...'
+        if len(self.text.__str__()) <= 50:
+            return self.text
+        else:
+            return self.text[:50] + '...'
 
