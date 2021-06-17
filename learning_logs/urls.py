@@ -5,4 +5,8 @@ from . import views
 urlpatterns = [
     # Página inicial
     url(r'^$', views.index, name='index'),
+
+    # Mostra todos assuntos
+    url(r'^topics/$', views.topics, name='topics'),
+
 ]

@@ -22,7 +22,7 @@ from django.contrib import admin
 from learning_logs import urls
 
 urlpatterns = [
-    #path('admin/', admin.site.urls),
-    url(r'^admin/', include(admin.site.urls)),
+    path('admin/', admin.site.urls),
+    #url(r'^admin/', include(admin.site.urls)),
     url(r'', include(('learning_logs.urls', 'learning_logs'), namespace='learning_logs')),
 ]
