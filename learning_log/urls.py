@@ -17,10 +17,12 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include, url
 from django.contrib import admin
-
+from django.conf.urls import include, url
+from django.contrib import admin
+from learning_logs import urls
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    #url(r'^admin/', include(admin.site.urls)),
-    url(r'', include('learning_logs.urls', namespace='learning_logs')),
+    #path('admin/', admin.site.urls),
+    url(r'^admin/', include(admin.site.urls)),
+    url(r'', include(('learning_logs.urls', 'learning_logs'), namespace='learning_logs')),
 ]
